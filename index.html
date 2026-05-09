@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Ordinary Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="particles"></div>
+    <canvas id="canvas"></canvas>
+    
+    <header class="hero">
+        <div class="lily-decoration lily-left">🌸</div>
+        <div class="lily-decoration lily-right">🌸</div>
+        <div class="hero-content">
+            <h1 class="glow-text">Happy ordinary day, my love, because every day with you is extraordinary.</h1>
+            <p class="subtitle">I can't imagine my life without you by my side.</p>
+            <button class="btn-primary glow-btn" type="button" id="surpriseBtn" onclick="window.location.href='surprise.html'">Surprise</button>
+            <div id="surprise" class="surprise-box hidden">
+                <p>Sidra, you make every day extraordinary. 💕</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="gallery" class="gallery-section hidden">
+        <h2 class="section-title">My Favorite View 🌸</h2>
+        <div class="slideshow-wrapper">
+            <button class="nav-btn prev" onclick="changeSlide(-1)">‹</button>
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <img src="images/1.jpg" alt="Memory 1" class="slide active">
+                    <img src="images/2.jpg" alt="Memory 2" class="slide">
+                    <img src="images/3.jpg" alt="Memory 3" class="slide">
+                </div>
+            </div>
+            <button class="nav-btn next" onclick="changeSlide(1)">›</button>
+        </div>
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <section id="reasons" class="reasons-section hidden">
+        <h2 class="section-title">Why I Adore You 🌸</h2>
+        <ul id="reasonsList" class="reasons-list">
+        </ul>
+        <button class="btn-primary" type="button" onclick="addReason()">Add More Reasons</button>
+    </section>
+
+    <section id="quotes" class="quotes-section hidden">
+        <div class="quotes-grid">
+            <blockquote class="quote-card">
+                <p>"You are my today and all of my tomorrows."</p>
+            </blockquote>
+            <blockquote class="quote-card">
+                <p>"In your eyes, I found my favorite color."</p>
+            </blockquote>
+            <blockquote class="quote-card">
+                <p>"Distance means so little when someone means so much."</p>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="messages" class="letter-section hidden">
+        <h2 class="section-title">From My Heart to Yours 🌸</h2>
+        <div class="message-wrapper">
+            <button class="btn-primary" type="button" onclick="typeLetter()">Reveal Letter</button>
+            <div class="message" id="loveLetter">
+                <p>My dearest Sidra, <br>
+                It’s strange how someone can become so important to you in such a quiet, effortless way. You slipped into my days without warning… and now even the simplest moments feel different because of you.<br>
+                Sometimes I catch myself thinking about you out of nowhere, the way you talk, the softness in your energy, even the little things like how much you love lilies and those gentle shades of pink… and it all just makes me smile without trying.<br>
+                Distance is there, I know. But it doesn’t feel like something that keeps us apart, it just makes what we have feel more meaningful, more intentional. Like every word, every moment we share actually matters.<br>
+                I don’t know what the future holds, and maybe that’s scary. But I do know that right now, in this moment, I’m grateful for you. For your kindness, your laughter, your presence in my life. You’ve become a part of my world in a way that feels so natural, so right.<br>
+                And the truth is… I’m not just enjoying this for what it is now. I find myself wondering where this could go, how much more there is to discover about you, how many more memories we haven’t even created yet.<br>
+                You’ve become something rare to me, Sidra. Something I don’t want to rush, but definitely don’t want to lose.<br>
+                So, let's cherish every moment and make every day extraordinary together.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="interactive" class="interactive-section hidden">
+        <h2 class="section-title">Send Some Love 🌸</h2>
+        <div class="interactive-grid">
+            <div class="interact-card">
+                <p class="card-title">Virtual Hugs Sent</p>
+                <p class="hug-count"><span id="hugCount">0</span></p>
+                <button class="btn-secondary" type="button" onclick="sendHug()">Send a Hug 🤗</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Made with ❤️ just for you</p>
+        <p class="footer-emoji">💕✨💕</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
